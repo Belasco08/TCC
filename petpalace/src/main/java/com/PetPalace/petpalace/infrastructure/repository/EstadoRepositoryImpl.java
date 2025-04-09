@@ -4,6 +4,7 @@ import com.PetPalace.petpalace.domain.model.Estado;
 import com.PetPalace.petpalace.domain.repository.EstadoRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ public class EstadoRepositoryImpl implements EstadoRepository {
 
     @PersistenceContext
     private EntityManager manager;
+
 
     @Override
     public List<Estado> listar() {
@@ -26,9 +28,11 @@ public class EstadoRepositoryImpl implements EstadoRepository {
     public Estado salvar(Estado estado) {
         return manager.merge(estado);
     }
-    
+
+
     @Override
     public void remover(Long id) {
-
+        Estado estado = buscar(id);
+        manager.remove(estado);
     }
 }

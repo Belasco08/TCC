@@ -13,8 +13,6 @@ public interface EstadoRepository {
     Estado buscar (Long id);
     Estado salvar (Estado estado);
 
-    Estado salvar(Long id);
-
     void remover (Long id);
 
 }
