@@ -33,3 +33,4 @@ public class CidadeRepositoryImpl implements CidadeRepository {
         manager.remove(cidade);
     }
 }
+    
