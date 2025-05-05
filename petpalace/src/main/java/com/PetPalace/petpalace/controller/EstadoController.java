@@ -1,6 +1,8 @@
 package com.PetPalace.petpalace.controller;
 
 
+import com.PetPalace.petpalace.domain.exception.EntidadeEmUsoException;
+import com.PetPalace.petpalace.domain.exception.EntidadeNaoEncontradaException;
 import com.PetPalace.petpalace.domain.model.Estado;
 import com.PetPalace.petpalace.domain.repository.EstadoRepository;
 import com.PetPalace.petpalace.domain.service.EstadoService;
@@ -51,6 +53,20 @@ public class EstadoController {
         }
         {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{estadoId}")
+    public  ResponseEntity<Estado> remover (Long estadoId){
+        try {
+            estadoService.excluir(estadoId);
+            return ResponseEntity.notFound().build();
+        }
+        catch (EntidadeNaoEncontradaException e){
+            return ResponseEntity.notFound().build();
+        }
+        catch (EntidadeEmUsoException e){
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
     }
 }

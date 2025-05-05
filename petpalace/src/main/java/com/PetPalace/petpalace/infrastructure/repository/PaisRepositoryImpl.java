@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -34,6 +35,9 @@ public class PaisRepositoryImpl implements PaisRepository {
     @Override
     public void remover(Long id) {
         Pais pais = buscar(id);
+        if (pais == null){
+            throw new EmptyResultDataAccessException(1);
+        }
         manager.remove(pais);
     }
 }
