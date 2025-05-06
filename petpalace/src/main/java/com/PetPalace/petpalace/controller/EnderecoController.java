@@ -1,7 +1,7 @@
 package com.PetPalace.petpalace.controller;
 
 
-import com.PetPalace.petpalace.domain.Service.EnderecoService;
+import com.PetPalace.petpalace.domain.service.EnderecoService;
 import com.PetPalace.petpalace.domain.exception.EntidadeEmUsoException;
 import com.PetPalace.petpalace.domain.exception.EntidadeNaoEncontradaException;
 import com.PetPalace.petpalace.domain.model.Endereco;

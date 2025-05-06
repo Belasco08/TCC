@@ -11,7 +11,9 @@ public class Usuario {
     private String email;
     private String senha;
     private String telefone;
-    private Date data_cadastro;
+    private String quantidade_animal;
+    private Date data_checkin;
+    private Date data_checkout;
     private String foto_perfil;
     @ManyToOne
     @JoinColumn (name = "endereco_id")
