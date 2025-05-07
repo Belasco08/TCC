@@ -1,0 +1,26 @@
+body{
+    background-color: #fffbde;
+}
+
+#home {
+    background: #151c0d;
+    color: #fffbde;
+}
+
+.caixa {
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.col{
+    padding-top: 50px;
+}
+
+.subir{
+    margin-top: -50px;
+}
+
+.navbar-text{
+    margin-right: 10px;
+    float: right;
+}
