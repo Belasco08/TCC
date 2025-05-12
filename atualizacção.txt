@@ -1,0 +1,29 @@
+modificação passo a passo para TCC🙄
+
+AULA 07/05
+
+exclui os impl
+
+ai vc refaz o repository
+
+refaz o controller
+
+refaz o service
+
+
+
+
+AULA TCC 12/05
+
+
+
+refiz tudo oq tinha pra fzr
+
+comcei a fazer uma tabela nova = animais
+
+por enquanto so fiz o model 
+
+(Perguntar para o Bidu se tem como deixar o porte do animal como opção de escolha, tem q saber qual eu posso usar no lugar do enum)
+
+fiz repository e service
+
