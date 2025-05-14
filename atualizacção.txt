@@ -27,3 +27,14 @@ por enquanto so fiz o model
 
 fiz repository e service
 
+
+
+AULA 14/05
+
+tem q refazer os repositorys (apenas com os many to one)
+fzr as querys e etc... pergunta para o loro disso
+
+tem q adicioanar mais duas dependencidas no pom.xml
+no application  properties tem que q colocar coias novas tbm
+
+fazer o db migration
