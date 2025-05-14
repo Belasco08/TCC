@@ -27,6 +27,8 @@ por enquanto so fiz o model
 
 fiz repository e service
 
+fiz o controller
+
 
 
 AULA 14/05
