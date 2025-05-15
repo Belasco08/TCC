@@ -9,6 +9,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UsuarioService {
     @Autowired
@@ -29,4 +31,5 @@ public class UsuarioService {
             throw new EntidadeNaoEncontradaException(String.format("Não existe cadastro de usuario com codigo %d",id));
         }
     }
+
 }
