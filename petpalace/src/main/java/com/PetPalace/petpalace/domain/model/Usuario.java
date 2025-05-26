@@ -12,6 +12,10 @@ import java.util.Date;
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
+
+    @EqualsAndHashCode.Include
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
@@ -21,8 +25,10 @@ public class Usuario {
     private Date data_checkin;
     private Date data_checkout;
     private String foto_perfil;
+
     @Column(name = "tipo_usuario")
     private String tipoUsuario;
+
     @ManyToOne
     @JoinColumn (name = "endereco_id")
     private Endereco endereco;

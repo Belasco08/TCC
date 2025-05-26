@@ -1,7 +1,6 @@
 package com.PetPalace.petpalace.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +12,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table (name = "tb_anuncios")
 public class Anuncios {
+     @EqualsAndHashCode.Include
+     @Id
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
      private Long id;
 
      // private id_anfitriao - perguntar para o bidu como fzr isso

@@ -62,7 +62,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{usuarioId}")
-    public  ResponseEntity<Cidade> remover (Long usuarioId){
+    public  ResponseEntity<Cidade> remover (@PathVariable Long usuarioId){
         try {
             usuarioService.excluir(usuarioId);
             return ResponseEntity.notFound().build();

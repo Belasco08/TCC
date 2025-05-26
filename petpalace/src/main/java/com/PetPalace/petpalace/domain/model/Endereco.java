@@ -1,9 +1,6 @@
 package com.PetPalace.petpalace.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,6 +10,9 @@ import lombok.EqualsAndHashCode;
 @Table(name = "tb_endereco")
 public class Endereco {
 
+    @EqualsAndHashCode.Include
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cep;
     private String rua;
