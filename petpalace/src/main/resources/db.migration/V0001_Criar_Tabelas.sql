@@ -1,5 +1,5 @@
 CREATE TABLE usuarios (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id bigint PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(255) NOT NULL,
@@ -7,16 +7,16 @@ CREATE TABLE usuarios (
     tipo_usuario ENUM('cliente', 'anfitriao') NOT NULL
 );
 CREATE TABLE enderecos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id bigint not null PRIMARY KEY AUTO_INCREMENT,
     rua VARCHAR(100) NOT NULL,
     numero VARCHAR(10) NOT NULL,
     complemento VARCHAR(100),
     bairro VARCHAR(100) NOT NULL,
     cep VARCHAR(15) NOT NULL,
-    cidade_id INT NOT NULL
+    cidade_id bigint NOT NULL
 );
 CREATE TABLE cidades (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id bigint PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     estado_id INT NOT NULL
 );
@@ -74,8 +74,9 @@ alter table cidades add constraint fk_cidade_estado foreign key (estado_id) refe
 alter table estados add constraint fk_estado_pais foreign key (pais_id) references paises(id);
 alter table animais add constraint fk_animal_usuario foreign key (id_usuario) references usuarios(id);
 alter table anuncios add constraint fk_anuncio_anfitriao foreign key (id_anfitriao) references usuarios(id);
-alter table anuncios add constraint fk_anuncio_endereco foreign key (id_endereco) references enderecos(id)
+alter table anuncios add constraint fk_anuncio_endereco foreign key (id_endereco) references enderecos(id);
 alter table reservas add constraint fk_reserva_cliente foreign key (id_cliente) references usuarios(id);
 alter table reservas add constraint fk_reserva_anuncio foreign key (id_anuncio) references anuncios(id);
 alter table reservas add constraint fk_reserva_animal foreign key (id_animal) references animais(id);
 
+TODOS OS INTS TEM QUE SUBSTITUIR POR BIGINT

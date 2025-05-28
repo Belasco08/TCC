@@ -21,7 +21,7 @@ public class Animal {
     private boolean peso;
     private String observacoes;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
