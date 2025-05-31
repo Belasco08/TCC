@@ -69,6 +69,24 @@ CREATE TABLE avaliacoes (
     comentario TEXT,
     data_avaliacao DATE
 );
+CREATE TABLE servico (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao VARCHAR(255),
+    preco DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE agendamento (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    data DATE NOT NULL,
+    horario TIME NOT NULL,
+    observacoes VARCHAR(255),
+
+    usuario_id BIGINT NOT NULL,
+    pet_id BIGINT NOT NULL,
+    servico_id BIGINT NOT NULL,
+);
+
 alter table enderecos add constraint fk_endereco_cidade foreign key (cidade_id) references cidades(id);
 alter table cidades add constraint fk_cidade_estado foreign key (estado_id) references estados(id);
 alter table estados add constraint fk_estado_pais foreign key (pais_id) references paises(id);
@@ -78,3 +96,7 @@ alter table anuncios add constraint fk_anuncio_endereco foreign key (id_endereco
 alter table reservas add constraint fk_reserva_cliente foreign key (id_cliente) references usuarios(id);
 alter table reservas add constraint fk_reserva_anuncio foreign key (id_anuncio) references anuncios(id);
 alter table reservas add constraint fk_reserva_animal foreign key (id_animal) references animais(id);
+
+ALTER TABLE agendamento ADD CONSTRAINT fk_agendamento_usuario FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+ALTER TABLE agendamento ADD CONSTRAINT fk_agendamento_pet FOREIGN KEY (pet_id) REFERENCES pet(id);
+ALTER TABLE agendamento ADD CONSTRAINT fk_agendamento_servico FOREIGN KEY (servico_id) REFERENCES servico(id);
