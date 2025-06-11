@@ -79,7 +79,7 @@ create table servico (
 create table agendamento (
     id bigint auto_increment primary key,
     data date not null,
-    horario time not null,
+    horario datetime not null,
     observacoes varchar(255),
     usuario_id bigint not null,
     pet_id bigint not null,

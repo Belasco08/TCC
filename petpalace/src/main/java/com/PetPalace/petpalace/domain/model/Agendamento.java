@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Data
@@ -18,8 +19,8 @@ public class Agendamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate data;
-    private LocalTime horario;
-
+    @Column(name = "horario", columnDefinition = "datetime")
+    private LocalDateTime horario;
 
     @JoinColumn(name = "animal_id")
     private Animal animal;
