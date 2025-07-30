@@ -1,0 +1,3 @@
+Fazer uma versão tipo YtbStudio, tem que fazer uma aba da visão do hotel recebendo a reserva e voltando para o cliente (reserva pendente// resaerva concluida). fzer tbm um aba de acompanhamento, tipo acompanhamnento de entrega da shoppee
+
+na aba do hotel tem que fazer o cadastro do hotel e aparecer automaticamente no mapa com os seus valores, aparecer tbm  todas as informações do cliente, e confimar a reserva. Caso houver alguma divergencia na reserva, o hotel suspende a reserva e entra em contato com o cliente, via email/telefone/wpp
