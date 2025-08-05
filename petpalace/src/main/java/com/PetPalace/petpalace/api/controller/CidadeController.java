@@ -38,7 +38,7 @@ public class   CidadeController {
         }
             return ResponseEntity.notFound().build();
     }
-    @PostMapping()
+    @PostMapping("/{cidadeId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Cidade> adicionar (@RequestBody Cidade cidade){
         cidade = cidadeService.salvar(cidade);

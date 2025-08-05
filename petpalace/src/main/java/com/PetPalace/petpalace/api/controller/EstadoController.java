@@ -37,7 +37,7 @@ public class EstadoController {
         return ResponseEntity.notFound().build();
     }
 
-    @PostMapping()
+    @PostMapping("/{estadoId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Estado> adicionar(@RequestBody Estado estado) {
         estado = estadoService.salvar(estado);

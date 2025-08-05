@@ -38,7 +38,7 @@ public class AnunciosController{
             return ResponseEntity.notFound().build();
         }
 
-        @PostMapping()
+        @PostMapping("/{anunciosId}")
         @ResponseStatus(HttpStatus.CREATED)
         public ResponseEntity <Anuncios> adicionar (@RequestBody Anuncios anuncios){
             anuncios = anunciosService.salvar(anuncios);

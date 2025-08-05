@@ -31,7 +31,7 @@ public class AgendamentoController {
         return agendamentoRepository.findAll();
     }
 
-    @GetMapping("/{agendamento}")
+    @GetMapping("/{agendamentoId}")
     public ResponseEntity<Agendamento> buscar (@PathVariable Long agendamentoId){
         Optional<Agendamento> agendamento = agendamentoRepository.findById(agendamentoId);
         if (agendamento.isPresent()){
@@ -39,7 +39,7 @@ public class AgendamentoController {
         }
         return ResponseEntity.notFound().build();
     }
-    @PostMapping()
+    @PostMapping("/{agendamentoId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Agendamento> adicionar (@RequestBody Agendamento agendamento){
         agendamento = agendamentoService.salvar(agendamento);

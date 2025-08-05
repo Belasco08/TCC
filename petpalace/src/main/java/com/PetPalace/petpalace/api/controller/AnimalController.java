@@ -35,7 +35,7 @@ public class AnimalController {
         return ResponseEntity.notFound().build();
     }
 
-    @PostMapping()
+    @PostMapping("/{animalId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity <Animal> adicionar (@RequestBody Animal animal){
         animal = animalService.salvar(animal);

@@ -31,7 +31,7 @@ public class ServicoController {
         return servicoRepository.findAll();
     }
 
-    @GetMapping("/{servico}")
+    @GetMapping("/{servicoId}")
     public ResponseEntity<Servico> buscar (@PathVariable Long paisId){
         Optional<Servico> servico = servicoRepository.findById(paisId);
         if (servico.isPresent()){
@@ -39,7 +39,7 @@ public class ServicoController {
         }
         return ResponseEntity.notFound().build();
     }
-    @PostMapping()
+    @PostMapping("/{servicoId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Servico> adicionar (@RequestBody Servico servico){
         servico = servicoService.salvar(servico);

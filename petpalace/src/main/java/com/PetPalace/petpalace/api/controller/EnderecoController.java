@@ -37,7 +37,7 @@ public class EnderecoController {
         }
         return ResponseEntity.notFound().build();
     }
-    @PostMapping()
+    @PostMapping("/{enderecoId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Endereco> adicionar(@RequestBody Endereco endereco) {
         endereco = enderecoService.salvar(endereco);

@@ -30,7 +30,7 @@ public class PaisController {
         return paisRepository.findAll();
     }
 
-    @GetMapping("/{pais}")
+    @GetMapping("/{paisId}")
     public ResponseEntity<Pais> buscar (@PathVariable Long paisId){
         Optional<Pais> pais = paisRepository.findById(paisId);
         if (pais.isPresent()){
@@ -38,7 +38,7 @@ public class PaisController {
         }
         return ResponseEntity.notFound().build();
     }
-    @PostMapping()
+    @PostMapping("/{paisId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Pais> adicionar (@RequestBody Pais pais){
         pais = paisService.salvar(pais);

@@ -41,7 +41,7 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
     }
-    @PostMapping()
+    @PostMapping("/{usuarioId}")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Usuario> adicionar (@RequestBody Usuario usuario){
         usuario = usuarioService.salvar(usuario);

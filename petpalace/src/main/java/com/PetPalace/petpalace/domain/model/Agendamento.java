@@ -22,10 +22,13 @@ public class Agendamento {
     @Column(name = "horario", columnDefinition = "datetime")
     private LocalDateTime horario;
 
+    @ManyToOne
     @JoinColumn(name = "animal_id")
     private Animal animal;
+    @OneToOne
     @JoinColumn(name = "servico_id")
     private Servico servico;
+    @ManyToOne
     @JoinColumn(name = "Usuario_id")
     private Usuario usuario;
 }
