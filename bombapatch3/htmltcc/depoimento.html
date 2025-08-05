@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace - Hotel de Luxo para Seu Pet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /*estilizando*/
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gatocapaa.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+
+        .pet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #1e4e40;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-teal-600 mr-2">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-gray-800 hover:text-teal-600">Pet<span
+                            class="text-teal-600">Palace</span></a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="text-gray-800 hover:text-teal-600 font-medium">Home</a>
+                    <a href="./sevico.html" class="text-gray-800 hover:text-teal-600 font-medium">Serviços</a>
+                    <a href="./sobre.html" class="text-gray-800 hover:text-teal-600 font-medium">Sobre Nós</a>
+                    <a href="./depoimento.html" class="text-gray-800 hover:text-teal-600 font-medium">Depoimentos</a>
+                    <a href="/contato.html" class="text-gray-800 hover:text-teal-600 font-medium">Contato</a>
+                    <a href="./reservar.html"
+                        class="bg-teal-800 text-white px-4 py-2 rounded-md hover:bg-teal-400 transition duration-300">Reservar
+                        Agora</a>
+                    <a href="./login.html"
+                        class="bg-teal-800 text-white px-4 py-2 rounded-md hover:bg-teal-400 transition duration-300">Entrar</a>
+                </div>
+
+                <!-- menu -->
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--comentarios Section -->
+    <section id="testimonials" class="py-16 bg-teal-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">O Que Nossos Clientes Dizem</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- comentario 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Meu pequeno Max adora ficar no espaço! Ele sempre volta mais feliz e
+                        animado. A equipe é incrível e me mandam fotos e vídeos todo santo dia, para me dar a maior
+                        segurança e tranquilidade enquanto estou no meu plantão."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana Silva"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Silva</h4>
+                            <p class="text-gray-500 text-sm">Mamãe do Max</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- comentario 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Cara, que lugar incrivel, muito bem preparado e com ótimos
+                        profissionais, da para ver que lá eles amam o que fazem. Minha Luna é muito tímida, mas lá ela
+                        se adaptou rápido. Adorei a suíte com arranhador e vista para o jardim!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Oliveira"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Carlos Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Papai da Luna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- comentario 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Meu bulldog francês precisa de cuidados especiais por causa da
+                        respiração. No PetPalace ele tem ar condicionado e monitoramento constante. Fico totalmente
+                        tranquila quando tenho que viajar para resolver assuntos particulares."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Mariana Costa"
+                            class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Mariana Costa</h4>
+                            <p class="text-gray-500 text-sm">Mamãe do Thor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- FAQ Section -->
+     <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes</h2>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Quais vacinas são obrigatórias para hospedar meu
+                            pet?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Para cães: V8/V10, antirrábica e gripe canina. Para gatos: V4/V5 e
+                            antirrábica. Todas devem estar em dia e com comprovante assinado por médico veterinário.
+                            Recomendamos também a aplicação de antipulgas e vermífugo antes da hospedagem.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Posso levar os pertences do meu pet?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Sim! Recomendamos que traga itens que tenham o cheiro de casa, como
+                            cobertor, brinquedo ou caminha, para ajudar na adaptação. Por questões de higiene, não
+                            aceitamos potes de comida ou água pessoais - utilizamos os nossos, que são esterilizados
+                            diariamente.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Como é feita a alimentação dos pets?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Seguimos rigorosamente as orientações dos tutores. Você pode trazer a
+                            ração do seu pet ou optar por nossa alimentação premium. Oferecemos 3 refeições diárias para
+                            adultos e 4 para filhotes, com horários personalizados conforme necessidade. Temos opções
+                            naturais e dietas especiais sob prescrição veterinária.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">E se meu pet ficar doente durante a
+                            hospedagem?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Temos veterinários 24h e clínica equipada para atendimentos. Em caso de
+                            qualquer alteração, entramos em contato imediatamente com o tutor. Se necessário, levamos ao
+                            veterinário particular do pet ou a nossa clínica parceira (custos adicionais serão
+                            informados previamente). Todos os hóspedes têm seguro saúde durante a estadia.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button
+                        class="faq-question w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="text-lg font-medium text-gray-800">Qual o horário para deixar e buscar meu
+                            pet?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Check-in: das 7h às 20h (segunda a sexta) e 10h às 17h (sábado).
+                            Check-out: até 12h (cobrança de diária adicional após esse horário). Aos domingos, apenas
+                            retirada das 9h às 13h. Para horários especiais, consulte disponibilidade com nossa equipe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>

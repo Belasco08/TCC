@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPalace - Hotel de Luxo para Seu Pet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /*estilizando*/
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gatocapaa.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+
+        .pet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #3B82F6;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!--Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-teal-600 mr-2">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold text-gray-800 hover:text-teal-600">Pet<span
+                            class="text-teal-600">Palace</span></a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="text-gray-800 hover:text-teal-600 font-medium">Home</a>
+                    <a href="./sevico.html" class="text-gray-800 hover:text-teal-600 font-medium">Serviços</a>
+                    <a href="./sobre.html" class="text-gray-800 hover:text-teal-600 font-medium">Sobre Nós</a>
+                    <a href="./depoimento.html" class="text-gray-800 hover:text-teal-600 font-medium">Depoimentos</a>
+                    <a href="/contato.html" class="text-gray-800 hover:text-teal-600 font-medium">Contato</a>
+                    <a href="./reservar.html"
+                        class="bg-teal-800 text-white px-4 py-2 rounded-md hover:bg-teal-400 transition duration-300">Reservar
+                        Agora</a>
+                    <a href="./login.html"
+                        class="bg-teal-800 text-white px-4 py-2 rounded-md hover:bg-teal-400 transition duration-300">Entrar</a>
+                </div>
+
+                <!-- menu -->
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre nos Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="img/goldensorrindo.webp" alt="Pet Palace capasobrenos"
+                        class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre o PetPalace</h2>
+                    <p class="text-gray-600 mb-4">Fundado em 2015, o PetPalace nasceu da paixão por animais e da vontade
+                        de oferecer o que há de melhor em hospedagem para pets. Nosso espaço foi cuidadosamente
+                        projetado para garantir conforto, segurança e diversão para seu animal de estimação.</p>
+                    <p class="text-gray-600 mb-6">Nossa equipe é composta por profissionais altamente qualificados,
+                        incluindo veterinários, pet sitters, treinadores e recreadores, todos dedicados a fazer da
+                        estadia do seu pet uma experiência memorável.</p>
+
+                          
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <span class="text-gray-700">Ambiente 100% seguro</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <span class="text-gray-700">Monitoramento 24h</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <span class="text-gray-700">Suítes individuais</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-teal-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <span class="text-gray-700">Áreas de lazer</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact"
+                        class="bg-teal-800 hover:bg-teal-400 text-white px-6 py-3 rounded-md font-medium transition duration-300">Fale
+                        Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- fotos Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nosso Espaço</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1594149929911-78975a43d4f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Pet Palace Suite" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="img/areapet.webp" alt="Pet Play Area"
+                        class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="img/spa.jpg" alt="Pet Spa"
+                        class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="img/gatodeitado.webp" alt="Pet Pool"
+                        class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551290464-66719418ca54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Pet Grooming" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                        alt="Pet Feeding" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
