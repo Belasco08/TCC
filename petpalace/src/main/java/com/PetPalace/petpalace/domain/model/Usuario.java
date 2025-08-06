@@ -21,9 +21,6 @@ public class Usuario {
     private String email;
     private String senha;
     private String telefone;
-    private String quantidade_animal;
-    private Date data_checkin;
-    private Date data_checkout;
     private String foto_perfil;
 
     @Column(name = "tipo_usuario")

@@ -86,16 +86,4 @@ create table agendamento (
     servico_id bigint not null,
 );
 
-alter table enderecos add constraint fk_endereco_cidade foreign key (cidade_id) references cidades(id);
-alter table cidades add constraint fk_cidade_estado foreign key (estado_id) references estados(id);
-alter table estados add constraint fk_estado_pais foreign key (pais_id) references paises(id);
-alter table animais add constraint fk_animal_usuario foreign key (id_usuario) references usuarios(i
-d);
-alter table anuncios add constraint fk_anuncio_anfitriao foreign key (id_anfitriao) references usuarios(id);
-alter table anuncios add constraint fk_anuncio_endereco foreign key (id_endereco) references enderecos(id);
-alter table reservas add constraint fk_reserva_cliente foreign key (id_cliente) references usuarios(id);
-alter table reservas add constraint fk_reserva_anuncio foreign key (id_anuncio) references anuncios(id);
-alter table reservas add constraint fk_reserva_animal foreign key (id_animal) references animais(id);
-alter table agendamento add constraint fk_agendamento_usuario foreign key (usuario_id) references usuarios(id);
-alter table agendamento add constraint fk_agendamento_pet foreign key (animais_id) references animais(id);
-alter table agendamento add constraint fk_agendamento_servico foreign key (servico_id) references servico(id);
+
