@@ -83,7 +83,7 @@ create table agendamento (
     observacoes varchar(255),
     usuario_id bigint not null,
     animais_id bigint not null,
-    servico_id bigint not null,
+    servico_id bigint not null
 );
 
 
