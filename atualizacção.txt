@@ -2,4 +2,5 @@ Na tabela anuncio, como o anfitriao faria para colocar a qtdd de vagas disponive
 
 tem que terminar as tabelas Porte, Unidade
 
-ver no chat oque fazer no service e no controller do mapa
+ver no chat oque fazer com o erro que esta dando nos metodos (ta pedindo pra criar metodos)
+
