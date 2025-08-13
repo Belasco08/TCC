@@ -22,9 +22,16 @@ public class Anuncios {
      private String titulo;
      private String Descricao;
      private BigDecimal preco_diaria;
+     private String fotos;
      private Boolean aceita_gatos;
      private Boolean aceita_caes;
      private int vagas_disponiveis;
-     private int id_endereco;
+     @OneToOne(cascade = CascadeType.ALL)
+     @JoinColumn(name = "mapa_id")
+     private Mapa mapa;
      private LocalDateTime data_criacao;
+     @ManyToOne
+     @JoinColumn(name = "unidade_id")
+     private Unidade unidade;
+
 }

@@ -30,6 +30,9 @@ public class Agendamento {
     @Column(name = "horario", columnDefinition = "datetime")
     private LocalDateTime horario;
     @ManyToOne
+    @JoinColumn(name = "unidade_id")
+    private Unidade unidade;
+    @ManyToOne
     @JoinColumn(name = "animal_id")
     private Animal animal;
     @OneToOne

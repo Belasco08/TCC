@@ -16,11 +16,12 @@ public class Animal {
     private String nome;
     private String especie;
     private String raca;
-    public String porte; // perguntar para o Bidu uma maneira de deixar como escolha, pique o Enum//
     private int idade;
     private boolean peso;
     private String observacoes;
-
+    @OneToOne
+    @JoinColumn(name = "porte_id")
+    private Porte porte;
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.math.BigDecimal;
+
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
@@ -19,7 +21,8 @@ public class Endereco {
     private String numero;
     private String complemento;
     private String bairro;
-
+    private BigDecimal latitude;
+    private BigDecimal longitude;
     @ManyToOne
     @JoinColumn (name = "cidade_id")
     private Cidade cidade;
