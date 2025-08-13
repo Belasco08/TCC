@@ -1,42 +1,5 @@
-modificação passo a passo para TCC🙄
+Na tabela anuncio, como o anfitriao faria para colocar a qtdd de vagas disponiveis que ele pode receber
 
-AULA 07/05
+tem que terminar as tabelas Porte, Unidade
 
-exclui os impl
-
-ai vc refaz o repository
-
-refaz o controller
-
-refaz o service
-
-
-
-
-AULA TCC 12/05
-
-
-
-refiz tudo oq tinha pra fzr
-
-comcei a fazer uma tabela nova = animais
-
-por enquanto so fiz o model 
-
-(Perguntar para o Bidu se tem como deixar o porte do animal como opção de escolha, tem q saber qual eu posso usar no lugar do enum)
-
-fiz repository e service
-
-fiz o controller
-
-
-
-AULA 14/05
-
-tem q refazer os repositorys (apenas com os many to one)
-fzr as querys e etc... pergunta para o loro disso
-
-tem q adicioanar mais duas dependencidas no pom.xml
-no application  properties tem que q colocar coias novas tbm
-
-fazer o db migration
+ver no chat oque fazer no service e no controller do mapa
