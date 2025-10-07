@@ -1,0 +1,230 @@
+/* Reset e básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #07c4ba;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #134e4a;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo-text {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo .highlight {
+  color: #12884d;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Seção de formulário */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px;
+  min-height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  background: #857d7d;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Parte esquerda */
+.form-left {
+  flex: 1;
+  background: #134e4a;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-left h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.form-left p {
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact i {
+  margin-right: 10px;
+}
+
+/* Parte direita */
+.form-right {
+  flex: 1;
+  padding: 40px;
+}
+
+.form-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-right label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.form-right input {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Botões */
+.submit-btn {
+  background-color: #134e4a;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background-color: #0d3835;
+}
+
+.btn-cadastrar {
+  display: inline-block;
+  background: transparent;
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn-google, .btn-facebook, .btn-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-google {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #444;
+}
+.btn-google img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.btn-facebook {
+  background: #1877f2;
+  color: #fff;
+}
+.btn-facebook:hover {
+  background: #145dbf;
+}
+
+.btn-github {
+  background: #333;
+  color: #fff;
+}
+.btn-github:hover {
+  background: #000;
+}
+
+/* Outras opções alinhadas */
+.outros-logins {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .form-container {
+    flex-direction: column;
+  }
+  .form-left {
+    padding: 30px;
+    text-align: center;
+  }
+  .form-right {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

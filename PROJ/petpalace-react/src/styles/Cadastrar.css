@@ -1,0 +1,275 @@
+body {
+    font-family: Roboto Condensed;
+    background-color: #5a5b5c; /* bg-gray-50 */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar a {
+    color: #333;
+    margin-left: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #0d9488; /* teal */
+  }
+  
+  .btn {
+    background: #134e4a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: #2dd4bf;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .form-left {
+    background: #134e4a;
+    color: white;
+    padding: 2rem;
+    flex: 1;
+  }
+  
+  .form-right {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  input:focus, select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 3px #0d9488;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: #134e4a;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: #2dd4bf;
+  }
+
+  /* Página */
+.cadastrar-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Logo à esquerda, links à direita */
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-text {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.logo-text:hover {
+  color: #0d9488;
+}
+
+.highlight {
+  color: #0d9488;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto; /* Empurra links e botões para a direita */
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0d9488;
+}
+
+/* Botões */
+.btn {
+  background: #134e4a;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2dd4bf;
+}
+
+  /* Formulário */
+  .form-section {
+    padding: 3rem 1rem;
+    background: #f3f4f6;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+  }
+  
+  /* Esquerda */
+  .form-left {
+    background: #134e4a;
+    color: white;
+    padding: 2rem;
+    flex: 1;
+  }
+  
+  .form-left h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-left p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+  }
+  
+  /* Direita */
+  .form-right {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 3px #0d9488;
+  }
+  
+  /* Botão de envio */
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: #134e4a;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background: #2dd4bf;
+  }
+
+  
+  
+  
