@@ -1,0 +1,338 @@
+/* ========= RESET ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+body, html, #root {
+  height: 100%;
+  background-color: #ffffff;
+  color: #0f4e49;
+}
+
+/* ========= VARIÁVEIS ========= */
+:root {
+  --primary: #134e4a;
+  --accent: #07c4ba;
+  --bg: #fdfdfd;
+  --card: #ffffff;
+  --text: #0f4e49;
+  --gray: #555;
+  --border: #dcdcdc;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  z-index: 999;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.logo .highlight {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #05b8aa;
+}
+
+/* ========= CABEÇALHO CENTRALIZADO ========= */
+.reserva-header {
+  max-width: 1200px;
+  margin: 100px auto 20px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.reserva-header h2 {
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.reserva-header .intro {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+/* ========= BARRA DE PESQUISA ========= */
+.search-bar {
+  max-width: 700px;
+  margin: 20px auto 40px auto;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text);
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+/* ========= LAYOUT PRINCIPAL ========= */
+.reserva-flex-airbnb {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  gap: 32px;
+  padding: 0 16px;
+  align-items: flex-start;
+}
+
+/* ========= LISTA DE HOTÉIS ========= */
+.hotel-list-airbnb {
+  flex: 1 1 380px;
+  max-width: 380px;
+  height: calc(100vh - 300px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.hotel-list-airbnb::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hotel-list-airbnb::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 20px;
+}
+
+/* ========= CARDS ========= */
+.hotel-card-airbnb {
+  background: var(--card);
+  border-radius: 16px;
+  margin-bottom: 22px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: all 0.25s ease-in-out;
+  border: 1px solid #eaeaea;
+}
+
+.hotel-card-airbnb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.hotel-card-airbnb.selecionado {
+  border-color: var(--accent);
+}
+
+.hotel-card-airbnb img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.hotel-info-airbnb {
+  padding: 16px 14px;
+}
+
+.hotel-info-airbnb h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.hotel-info-airbnb .cidade {
+  font-size: 0.95rem;
+  color: #0a6a61;
+}
+
+.hotel-info-airbnb .small {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ========= MAPA E FORMULÁRIO ========= */
+.map-form-container {
+  flex: 2 1 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.map-wrapper-airbnb {
+  height: 440px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+}
+
+#mapa,
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.form-container-airbnb {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #eaeaea;
+}
+
+.form-container-airbnb h3 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.form-container-airbnb form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+input, select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d6e6e4;
+  background: #fbfdfc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(7,196,186,0.25);
+}
+
+.submit-btn {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ========= PLACEHOLDER ========= */
+.placeholder-form {
+  text-align: center;
+  color: var(--accent);
+  padding: 24px;
+}
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 1000px) {
+  .reserva-flex-airbnb {
+    flex-direction: column;
+  }
+
+  .hotel-list-airbnb {
+    max-width: none;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 10px;
+  }
+
+  .hotel-card-airbnb {
+    min-width: 300px;
+  }
+
+  .map-wrapper-airbnb {
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .reserva-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    padding: 10px 14px;
+  }
+}

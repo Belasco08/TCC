@@ -1,0 +1,382 @@
+/* ====== RESET GERAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  width: 100%;
+  background-color: #134e4a;
+  color: white;
+  padding: 12px 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo .highlight {
+  color: #07c4ba;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #07c4ba;
+}
+
+/* ====== CONTEÚDO PRINCIPAL ====== */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* ====== CAIXA DE LOGIN ====== */
+.login-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 45px 40px;
+  width: 460px;
+  max-width: 95%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-top: 6px solid #07c4ba;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.login-box:hover {
+  transform: translateY(-3px);
+}
+
+/* ====== TÍTULOS ====== */
+.login-title {
+  color: #134e4a;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.login-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #07c4ba;
+  margin: 8px auto 0;
+  border-radius: 3px;
+}
+
+.login-subtitle {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* ====== FORMULÁRIO ====== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-form label {
+  color: #134e4a;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #07c4ba;
+  box-shadow: 0 0 6px rgba(7, 196, 186, 0.4);
+}
+
+/* ====== BOTÃO ====== */
+.submit-btn {
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0d3835;
+}
+
+/* ====== LINKS ====== */
+.link-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-cadastrar {
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.btn-cadastrar:hover {
+  color: #134e4a;
+}
+
+/* ====== MENSAGEM DE ERRO ====== */
+.login-msg {
+  margin-top: 20px;
+  background-color: rgba(19, 78, 74, 0.9);
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 550px) {
+  .login-box {
+    padding: 35px 25px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+  }
+}
+/* ========= RESET ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+body, html, #root {
+  height: 100%;
+  background-color: #ffffff;
+  color: #0f4e49;
+}
+
+/* ========= VARIÁVEIS ========= */
+:root {
+  --primary: #134e4a;
+  --accent: #07c4ba;
+  --bg: #fdfdfd;
+  --card: #ffffff;
+  --text: #0f4e49;
+  --gray: #555;
+  --border: #dcdcdc;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  z-index: 999;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.logo .highlight {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #05b8aa;
+}
+
+/* ========= PÁGINAS DE LOGIN / CADASTRO ========= */
+.login-page, .cadastrar-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+
+.login-section, .cadastrar-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+}
+
+.login-box, .cadastrar-box {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.login-title, .cadastrar-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.login-subtitle, .cadastrar-subtitle {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.login-form, .cadastrar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form label, .cadastrar-form label {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.login-form input, .cadastrar-form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d6e6e4;
+  background: #fbfdfc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.login-form input:focus, .cadastrar-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(7,196,186,0.25);
+}
+
+.submit-btn {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.link-container {
+  margin-top: 12px;
+}
+
+.link-container a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
+
+.login-msg, .cadastrar-msg {
+  margin-top: 12px;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 600px) {
+  .login-box, .cadastrar-box {
+    padding: 30px 20px;
+  }
+
+  .login-title, .cadastrar-title {
+    font-size: 1.5rem;
+  }
+}
