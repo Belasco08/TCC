@@ -1,6 +1,5 @@
 // src/context/AuthContext.tsx
 import { createContext, useContext, useState, useEffect } from "react";
-import api from "../service/api";
 
 interface User {
   id: number;
@@ -27,13 +26,23 @@ export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState<User | null>(null);
   const [token, setToken] = useState<string | null>(null);
 
+  // ==== EVITA TRAVAMENTO DE LOADING INFINITO ====
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    const storedToken = localStorage.getItem("token");
+    try {
+      const storedUser = localStorage.getItem("user");
+      const storedToken = localStorage.getItem("token");
 
-    if (storedUser && storedToken) {
-      setUser(JSON.parse(storedUser));
-      setToken(storedToken);
+      if (storedUser && storedToken) {
+        const parsedUser = JSON.parse(storedUser);
+
+        if (parsedUser && typeof parsedUser === "object") {
+          setUser(parsedUser);
+          setToken(storedToken);
+        }
+      }
+    } catch (err) {
+      console.error("Erro ao carregar AuthContext:", err);
+      localStorage.clear(); // limpa se estiver corrompido
     }
   }, []);
 

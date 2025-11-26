@@ -1,4 +1,4 @@
-// src/pages/Login.tsx
+
 import React, { useState } from "react";
 import "../styles/Login.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -28,12 +28,11 @@ const Login: React.FC = () => {
 
       const data = response.data;
 
-      // Backend deve retornar: { id, name, email, token }
       const user = {
-        id: data.id,
-        nome: data.name,
-        email: data.email,
-        foto: data.foto ?? null
+        id: data.id ?? null,
+        nome: data.nome ?? data.name ?? "Usuário",
+        email: email,
+        foto: null
       };
 
       login(user, data.token);
