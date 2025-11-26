@@ -1,0 +1,40 @@
+.hotel-detalhes {
+  max-width: 1100px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  padding: 0 16px;
+  padding-top: 16%;
+}
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+.detalhes {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.detalhes h2 {
+  margin: 0;
+  color: #0f4e49;
+}
+.anfitriao-card {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fffb;
+}
+.anfitriao-card .btn {
+  display: inline-block;
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .hotel-detalhes {
+    grid-template-columns: 1fr;
+  }
+}

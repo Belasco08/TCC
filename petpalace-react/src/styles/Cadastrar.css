@@ -1,3 +1,7 @@
+.cadastrar-form-section {
+  padding-top: 100px; /* espaço abaixo do navbar fixo */
+}
+
 /* Reset e básicos */
 * {
   margin: 0;
@@ -9,11 +13,11 @@
 body, html {
   width: 100%;
   height: 100%;
-  background: #ffffff; /* cor sólida */
+  background: #ffffff;
 }
 
 /* Navbar */
-.navbar {
+.cadastrar-navbar {
   width: 100%;
   background: #134e4a;
   padding: 10px 50px;
@@ -26,25 +30,25 @@ body, html {
   z-index: 1000;
 }
 
-.navbar-container {
+.cadastrar-navbar-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
 
-.logo-text {
+.cadastrar-logo-text {
   color: #fff;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
 }
 
-.logo .highlight {
+.cadastrar-logo .cadastrar-highlight {
   color: #07c4ba;
 }
 
-.nav-links a {
+.cadastrar-nav-links a {
   margin-left: 20px;
   text-decoration: none;
   color: #fff;
@@ -52,12 +56,12 @@ body, html {
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.cadastrar-nav-links a:hover {
   color: #499779;
 }
 
 /* Formulário */
-.form-section {
+.cadastrar-form-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +69,7 @@ body, html {
   min-height: 100vh;
 }
 
-.form-container {
+.cadastrar-form-container {
   display: flex;
   width: 1150px;
   max-width: 95%;
@@ -77,7 +81,7 @@ body, html {
 }
 
 /* Parte esquerda */
-.form-left {
+.cadastrar-form-left {
   flex: 1.4;
   position: relative;
   display: flex;
@@ -88,7 +92,7 @@ body, html {
   overflow: hidden;
 }
 
-.form-image {
+.cadastrar-form-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -98,7 +102,7 @@ body, html {
   z-index: 1;
 }
 
-.overlay-text {
+.cadastrar-overlay-text {
   position: relative;
   z-index: 2;
   padding: 40px;
@@ -106,17 +110,17 @@ body, html {
   border-radius: 0 20px 20px 0;
 }
 
-.overlay-text h2 {
+.cadastrar-overlay-text h2 {
   font-size: 28px;
   margin-bottom: 12px;
 }
 
-.overlay-text p {
+.cadastrar-overlay-text p {
   margin-bottom: 20px;
   font-size: 16px;
 }
 
-.contact {
+.cadastrar-contact {
   justify-content: center;
   display: flex;
   gap: 10px;
@@ -124,7 +128,7 @@ body, html {
 }
 
 /* Parte direita */
-.form-right {
+.cadastrar-form-right {
   flex: 1;
   padding: 60px;
   display: flex;
@@ -132,32 +136,32 @@ body, html {
   justify-content: center;
 }
 
-.titulo-login {
+.cadastrar-titulo-login {
   font-size: 28px;
   color: #134e4a;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.subtitulo-login {
+.cadastrar-subtitulo-login {
   text-align: center;
   color: #555;
   margin-bottom: 40px;
   font-size: 16px;
 }
 
-.form-right form {
+.cadastrar-form-right form {
   display: flex;
   flex-direction: column;
 }
 
-.form-right label {
+.cadastrar-form-right label {
   margin: 10px 0 5px;
   font-weight: bold;
 }
 
-.form-right input,
-.form-right select {
+.cadastrar-form-right input,
+.cadastrar-form-right select {
   padding: 14px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
@@ -166,15 +170,15 @@ body, html {
   font-size: 15px;
 }
 
-.form-right input:focus,
-.form-right select:focus {
+.cadastrar-form-right input:focus,
+.cadastrar-form-right select:focus {
   border-color: #07c4ba;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Botão sólido */
-.submit-btn {
-  background-color: #0d3835;
+/* Botão */
+.cadastrar-submit-btn {
+  background-color: #125c43;
   color: #fff;
   border: none;
   padding: 14px;
@@ -185,23 +189,23 @@ body, html {
   transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
+.cadastrar-submit-btn:hover {
   background-color: #0d3835;
 }
 
 /* Responsividade */
 @media (max-width: 950px) {
-  .form-container {
+  .cadastrar-form-container {
     flex-direction: column;
     height: auto;
   }
-  .form-left {
+  .cadastrar-form-left {
     height: 300px;
   }
-  .overlay-text {
+  .cadastrar-overlay-text {
     padding: 20px;
   }
-  .form-right {
+  .cadastrar-form-right {
     padding: 30px;
   }
 }

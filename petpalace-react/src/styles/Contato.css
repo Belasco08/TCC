@@ -17,6 +17,7 @@
   font-size: 2rem;
   color: #0eb9ae;
   margin-bottom: 1rem;
+  padding-top: 4%;
 }
 
 .contato-section .intro {
@@ -33,6 +34,7 @@
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
+  
 }
 
 /* Info */

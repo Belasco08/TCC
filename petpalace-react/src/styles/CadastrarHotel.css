@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+/* Página principal */
+.cadastrarhotel-page {
+  background-color: #d4d4d4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Lato", sans-serif;
+}
+
+/* Seção do formulário (ajuste o espaçamento superior aqui se o navbar sobrepor) */
+.cadastrarhotel-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 20px 80px; /* 100px = espaço logo abaixo do navbar */
+  box-sizing: border-box;
+}
+
+/* Container do formulário */
+.cadastrarhotel-form-container {
+  background-color: #ebebeb;
+  width: 85%;
+  max-width: 850px;
+  padding: 50px 60px;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cadastrarhotel-form-container h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.cadastrarhotel-form-container p {
+  font-size: 1.1rem;
+  color: #202020;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Formulário */
+.cadastrarhotel-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cadastrarhotel-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.cadastrarhotel-form-grid input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.cadastrarhotel-form-grid input:focus {
+  border-color: #078a6d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 248, 195, 0.6);
+}
+
+/* Imagem */
+.cadastrarhotel-image-preview {
+  margin-bottom: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+.cadastrarhotel-image-preview img {
+  max-width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Botão */
+.cadastrarhotel-btn-cadastrar {
+  background-color: #0d9488;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 14px 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.cadastrarhotel-btn-cadastrar:hover {
+  background-color: #0a7066;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .cadastrarhotel-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cadastrarhotel-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cadastrarhotel-form-container {
+    padding: 30px 20px;
+    width: 92%;
+  }
+
+  .cadastrarhotel-section {
+    padding: 90px 20px 60px;
+  }
+}
+.upload-area {
+  border: 2px dashed #0d9488;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+  margin-bottom: 30px; /* espaçamento extra antes do botão */
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.upload-area.dragover {
+  background-color: #c8fdf5;
+  border-color: #0a7066;
+}
+
+.upload-area p {
+  color: #333;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.upload-area input[type="file"] {
+  display: none;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preview-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

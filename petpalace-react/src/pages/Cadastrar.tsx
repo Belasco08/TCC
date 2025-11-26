@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Cadastrar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../service/api";
-import petsImage from "../assets/img/gatocapaa.jpg"; // Imagem local
+import petsImage from "../assets/img/gatocapaa.jpg";
+import Navbar from "../components/Navbar"; // mesmo Navbar usado em CadastrarHotel
 
 const Cadastrar: React.FC = () => {
   const navigate = useNavigate();
@@ -41,38 +42,27 @@ const Cadastrar: React.FC = () => {
   };
 
   return (
-    <div className="cadastrar-page">
-      <header className="navbar">
-        <div className="navbar-container">
-          <div className="logo">
-            <i className="fas fa-paw"></i>
-            <Link to="/" className="logo-text">
-              Pet<span className="highlight">Palace</span>
-            </Link>
-          </div>
-          <nav className="nav-links">
-            <Link to="/">Home</Link>
-            <Link to="/servicos">Serviços</Link>
-            <Link to="/contato">Contato</Link>
-            <Link to="/reservar">Reservar</Link>
-            <Link to="/login" className="btn">Entrar</Link>
-          </nav>
-        </div>
-      </header>
+    <>
+      {/* Navbar igual ao CadastrarHotel */}
+      <Navbar />
 
-      <section className="form-section">
-        <div className="form-container">
+      <section className="cadastrar-form-section">
+        <div className="cadastrar-form-container">
           {/* Parte esquerda */}
-          <div className="form-left">
-            <img src={petsImage} alt="Pets felizes" className="form-image" />
-            <div className="overlay-text">
+          <div className="cadastrar-form-left">
+            <img
+              src={petsImage}
+              alt="Pets felizes"
+              className="cadastrar-form-image"
+            />
+            <div className="cadastrar-overlay-text">
               <h2>Faça o seu cadastro</h2>
               <p>Preencha os dados ao lado para efetivar o seu cadastro</p>
-              <div className="contact">
+              <div className="cadastrar-contact">
                 <i className="fas fa-phone-alt"></i>
                 <span>(11) 98765-4321</span>
               </div>
-              <div className="contact">
+              <div className="cadastrar-contact">
                 <i className="fas fa-envelope"></i>
                 <span>reservas@petpalace.com</span>
               </div>
@@ -80,10 +70,10 @@ const Cadastrar: React.FC = () => {
           </div>
 
           {/* Parte direita */}
-          <div className="form-right">
-            <h2 className="titulo-login">Cadastro de Usuário</h2>
-            <p className="subtitulo-login">
-              Crie sua conta e comece a gerenciar seus pets 
+          <div className="cadastrar-form-right">
+            <h2 className="cadastrar-titulo-login">Cadastro de Usuário</h2>
+            <p className="cadastrar-subtitulo-login">
+              Crie sua conta e comece a gerenciar seus pets
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -133,12 +123,14 @@ const Cadastrar: React.FC = () => {
                 <option value="anfitriao">Anfitrião</option>
               </select>
 
-              <button type="submit" className="submit-btn">Cadastrar</button>
+              <button type="submit" className="cadastrar-submit-btn">
+                Cadastrar
+              </button>
             </form>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

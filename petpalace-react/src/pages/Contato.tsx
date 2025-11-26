@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Contato.css";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const Contato: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -10,31 +10,12 @@ const Contato: React.FC = () => {
 
   return (
     <div className="contato-page">
-      {/* Navbar */}
-     
-<header className="navbar">
-  <div className="navbar-container">
-    <div className="logo">
-      <i className="fas fa-paw"></i>
-      <Link to="/" className="logo-text">
-        Pet<span className="highlight">Palace</span>
-      </Link>
-    </div>
-    <nav className="nav-links">
-      <Link to="/">Home</Link>
-      <Link to="/servicos">Serviços</Link>
-      <Link to="/contato">Contato</Link>
-      <Link to="/reservar">Reservar</Link>
-      <Link to="/login" className="btn">Entrar</Link>
-    </nav>
-  </div>
-</header>
+      <Navbar activePage="contato" />
 
       {/* Sessão Contato */}
       <section className="contato-section">
         <h2>Entre em Contato</h2>
-        <p className="intro">Estamos prontos para atender você e seu pet 
-        </p>
+        <p className="intro">Estamos prontos para atender você e seu pet</p>
 
         <div className="contato-container">
           {/* Informações */}
@@ -63,7 +44,7 @@ const Contato: React.FC = () => {
         </div>
       </section>
 
-      {/* Sessão Depoimentos */}
+      {/* Depoimentos */}
       <section className="depoimentos-section">
         <h2>O que nossos clientes dizem</h2>
         <p className="intro">
@@ -96,7 +77,6 @@ const Contato: React.FC = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
